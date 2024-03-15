@@ -1,3 +1,4 @@
+
 1. **Project Overview:**
    - I debugging a DOM application to prevent users from adding duplicate fitness goals to a list.
 

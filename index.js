@@ -12,7 +12,7 @@ const displayWorkoutRoutine = () => {
   const newWorkout = document.createElement("li");
   newWorkout.textContent = workoutInput;
   workoutList.appendChild(newWorkout);
-  clearInputField();
+  clearInputField(); 
 };
 
 // Event listener for submitting workout routine
