@@ -17,8 +17,7 @@ const displayWorkoutRoutine = () => {
 // Event listener for submitting workout routine
 document.querySelector("#submitWorkout").addEventListener("click", displayWorkoutRoutine);
 
-// ⚠️⚠️⚠️ Lesson 3: Creating and Removing Elements ⚠️⚠️⚠️
-// Function to add new fitness goals and remove completed ones
+// add new fitness goals and remove completed ones
 const addNewGoal = () => {
   const goalInput = document.querySelector("#goalInput").value;
   const goalList = document.querySelector("#goalList");
@@ -48,11 +47,17 @@ document.querySelector("#submitGoal").addEventListener("click", addNewGoal);
 let waterIntake = 0;
 const updateWaterIntake = (change) => {
   waterIntake += change;
-  document.querySelector("#waterIntakeDisplay").textContent = `${waterIntake} glasses 💦`;
+  document.querySelector(
+    "#waterIntakeDisplay"
+  ).textContent = `${waterIntake} glasses 💦`;
 };
 
-document.querySelector("#increaseWater").addEventListener("click", () => updateWaterIntake(1));
-document.querySelector("#decreaseWater").addEventListener("click", () => updateWaterIntake(-1));
+document
+  .querySelector("#increaseWater")
+  .addEventListener("click", () => updateWaterIntake(1));
+document
+  .querySelector("#decreaseWater")
+  .addEventListener("click", () => updateWaterIntake(-1));
 
 const updateProgressCharts = () => {
   document.querySelector("#workoutProgress").textContent =
