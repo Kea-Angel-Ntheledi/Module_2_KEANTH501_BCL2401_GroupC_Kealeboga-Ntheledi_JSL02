@@ -12,6 +12,7 @@ const displayWorkoutRoutine = () => {
   const newWorkout = document.createElement("li");
   newWorkout.textContent = workoutInput;
   workoutList.appendChild(newWorkout);
+  clearInputField();
 };
 
 // Event listener for submitting workout routine
@@ -21,6 +22,7 @@ document.querySelector("#submitWorkout").addEventListener("click", displayWorkou
 const addNewGoal = () => {
   const goalInput = document.querySelector("#goalInput").value;
   const goalList = document.querySelector("#goalList");
+  clearInputField();
 
   // NOW LET'S DEBUG TO PREVENT DUPLICATE GOALS FROM BEING SUBMITTED 🚀
   let isDuplicate = false;
@@ -79,3 +81,8 @@ const submitMealPlan = (event) => {
 document
   .querySelector("#mealPlanForm")
   .addEventListener("submit", submitMealPlan);
+
+function clearInputField() {
+    document.querySelector("#goalInput").value = "";
+    document.querySelector("#workoutInput").value = "";
+  }
